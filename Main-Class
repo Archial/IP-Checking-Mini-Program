@@ -1,0 +1,77 @@
+//this is the rough start of a project for a mini app that
+//checks IP addresses and ports. Loosely modeled off of ping.eu for
+//its start
+package tycoproject;
+
+
+
+import java.io.*;
+import java.util.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author tycois psg
+ */
+public class Tycoproject {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+  
+        //declare variables
+        String ip, port, welcomeMsg, errorMsg, 
+                endingMsg,promptIP, promptPort;
+        
+        //adding values
+        welcomeMsg = "Welcome to the Mini Ping Port App!";
+        promptIP = "Please enter the full IPv4 address: ";
+        promptPort = "Please enter the port number: ";
+        
+        //Welcome Message
+        JOptionPane.showMessageDialog(null, welcomeMsg);
+        
+       userinput user = new userinput();
+       user.userinput();
+ 
+// InetAddressValidator validator =  new InetAddressValidator( );
+ //validator.isValid();
+
+        
+/*try {
+        Runtime.getRuntime().exec("cmd.exe /c start ping 192.168.11.75");
+       // Runtime.getRuntime().exec("cmd.exe /c start telnet 192.168.11.75 8000");
+        System.out.println("Open CMD and ping IP");   
+}//end try
+
+catch (IOException ex){
+    ex.printStackTrace();
+    
+}//end catch*/
+/*THIS IS WHERE THE USABLE CODE BEGINS
+try {
+      
+       Runtime.getRuntime().exec("cmd.exe /c start arp -a");
+        System.out.println("Table");   
+}//end try
+
+catch (IOException ex){
+    ex.printStackTrace();
+    
+}//end catch
+
+THIS IS WHERE THE USABLE CODE ENDS*/
+
+    }//end main
+    
+}//end class
+
+/*Progam Notes:
+Run Time info: https://docs.oracle.com/javase/7/docs/api/java/lang/Runtime.html
+*/
