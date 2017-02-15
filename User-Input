@@ -1,0 +1,38 @@
+
+package ipproject;
+
+import java.io.IOException;
+import java.util.*;
+import javax.swing.JOptionPane;
+
+
+
+
+public class userinput {
+    
+    Scanner scan = new Scanner( System.in );
+    
+    void userinput () {
+    //https://docs.oracle.com/javase/7/docs/api/javax/swing/JOptionPane.html
+    //Goal: prompt the user  to enter the IP Address
+    
+    
+    //variable for IP and prompts user for input
+    
+    JOptionPane.showInputDialog("Please enter the IP address: ");
+        String ip = scan.next();
+    JOptionPane.showMessageDialog(null, "Thanks!");
+        
+        
+    //validate the IP address
+    //http://commons.apache.org/proper/commons-validator/apidocs/org/apache/commons/validator/routines/InetAddressValidator.html
+   //http://codereview.stackexchange.com/questions/14252/validate-ip-address-in-java
+
+    
+    //passing variables between classes  revie:
+    //http://docs.oracle.com/javase/tutorial/java/javaOO/
+    }
+    
+    
+    
+}
