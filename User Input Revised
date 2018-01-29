@@ -1,0 +1,72 @@
+Re-coded User Input
+package ipproject;
+
+import java.io.IOException;
+import java.util.*;
+import javax.swing.JOptionPane;
+
+public class userinput {
+ 
+     //variables
+     public String 
+     ip, 
+     port, 
+     welcomeMsg = "Welcome to the Mini Ping Port App!", 
+     errorMsg = "Plesae try again",
+     endingMsg = "Thank you for using the MPP App!", 
+     promptIP = "Please enter your IPv4 IP address: ", 
+     promptPort = "Please enter your port number: ",
+     confirmation1 = "The IP address is: ",
+     confirmation2 = "The port is: ";
+     
+
+     Scanner scan = new Scanner(System.in);
+
+
+
+     public void ipAddress(){
+     
+     System.out.println(welcomeMsg);
+     System.out.println(promptIP);
+     ip = scan.next();
+     
+     System.out.println(promptPort);
+     port = scan.next();
+     
+     System.out.println(confirmation1 + ip + ". " + confirmation2 + port + "." );
+
+     
+     //look into adding some prompts later
+     
+     try {
+      
+       Runtime.getRuntime().exec("cmd.exe /k start ping " + ip);
+         
+}//end try ip
+
+catch (IOException ex){
+    ex.printStackTrace();
+    
+}//end catch ip
+
+     try {
+     
+     Runtime.getRuntime().exec("cmd.exe /k start telnet " + ip + "" + port);
+     
+     
+     
+     }//end try 2
+     
+     catch (IOException ex){
+     
+     ex.printStackTrace();
+     
+     }//end catch 2
+     
+     }//end IP Address
+     
+        
+       
+
+
+}//end class
